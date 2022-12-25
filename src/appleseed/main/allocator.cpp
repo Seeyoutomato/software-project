@@ -568,10 +568,16 @@ void operator delete[](void* ptr, const std::nothrow_t&)
 
 #else
 
+class rename_opserator{
+    public:
+        void operator delete
+}
+
 void log_allocation(const void* unaligned_ptr, const void* aligned_ptr, const std::size_t size) {}
 void log_allocation_failure(const std::size_t size) {}
 void log_deallocation(const void* unaligned_ptr, const void* aligned_ptr) {}
 void start_memory_tracking() {}
 void stop_memory_tracking() {}
+
 
 #endif  // _WIN32
